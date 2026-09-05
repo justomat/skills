@@ -78,6 +78,7 @@ High-leverage workflows for unattended or coordinated agent runs.
 | [`recall`](skills/recall/SKILL.md) | Reconstruct recent working context, live state, and unresolved tasks before starting work. |
 | [`reflect`](skills/reflect/SKILL.md) | Multi-perspective retrospective across transcripts to capture actionable learnings. |
 | [`show-me-your-work`](skills/show-me-your-work/SKILL.md) | Generate a structured decision log (TSV) documenting every tradeoff and verification step. |
+| [`handoff`](skills/handoff/SKILL.md) | Compact active conversation into a structured brief for the next agent session. |
 | [`swarm`](skills/swarm/SKILL.md) | Fan out N parallel worker agents to explore or test across large surfaces simultaneously. |
 
 ---
@@ -99,6 +100,8 @@ Tools for understanding systems, probing history, and crafting robust code.
 
 | Skill | Description |
 |---|---|
+| [`codebase-design`](skills/codebase-design/SKILL.md) | Shared vocabulary and principles for designing deep modules with narrow interfaces. |
+| [`improve-codebase-architecture`](skills/improve-codebase-architecture/SKILL.md) | Scan codebase for architectural friction, shallow modules, and deepening opportunities. |
 | [`architect`](skills/architect/SKILL.md) | Sketch types, interfaces, and module structure before writing implementation code. |
 | [`how`](skills/how/SKILL.md) | Deep trace of runtime behavior, control flows, and state lifecycles. |
 | [`why`](skills/why/SKILL.md) | Archeological deep-dive into git history, PRs, issues, and incident rationale. |
@@ -112,6 +115,7 @@ Ensuring correctness and regression prevention.
 
 | Skill | Description |
 |---|---|
+| [`tdd`](skills/tdd/SKILL.md) | Test-driven development (red-green-refactor loop) verifying behavior at public seams. |
 | [`pstack-tdd`](skills/pstack-tdd/SKILL.md) | Targeted test-driven development loop for regression tests and critical logic. |
 | [`blast-radius`](skills/blast-radius/SKILL.md) | Calculate downstream impact and potential breakage across callers before refactoring. |
 | [`create-verification-skill`](skills/create-verification-skill/SKILL.md) | Author reusable verification scripts and harnesses for complex feature checks. |
@@ -124,6 +128,7 @@ Direct agent harnesses and integrations.
 
 | Skill | Description |
 |---|---|
+| [`ego-browser`](skills/ego-browser/SKILL.md) | Programmatic browser automation, live DOM interaction, and UI verification runtime. |
 | [`antigravity-manager`](skills/antigravity-manager/SKILL.md) | Guide Claude Code to orchestrate the Antigravity CLI (`agy`) as an autonomous worker. |
 | [`pi-manager`](skills/pi-manager/SKILL.md) | Direct the `pi` coding-agent harness with pinned model selection and execution flags. |
 | [`biznetgio`](skills/biznetgio/SKILL.md) | Manage Biznet Gio cloud infrastructure (metal, VMs, storage, IPs) via CLI. |
