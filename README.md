@@ -82,6 +82,18 @@ High-leverage workflows for unattended or coordinated agent runs.
 
 ---
 
+### 🔥 Grilling & Stress-Testing
+Relentless plan grilling and domain modeling patterns (adapted from Matt Pocock).
+
+| Skill | Description |
+|---|---|
+| [`grilling`](skills/grilling/SKILL.md) | Grill the user relentlessly about a plan, decision, or architecture tree until every branch is resolved. |
+| [`grill-me`](skills/grill-me/SKILL.md) | Quick invocation for the grilling interview to stress-test your thinking. |
+| [`grill-with-docs`](skills/grill-with-docs/SKILL.md) | Relentless interview that concurrently produces ADRs and domain glossaries. |
+| [`domain-modeling`](skills/domain-modeling/SKILL.md) | Actively build and sharpen a project's domain glossary (`CONTEXT.md`) and ADRs. |
+
+---
+
 ### 🏗 Architecture, Investigation & TypeScript
 Tools for understanding systems, probing history, and crafting robust code.
 
