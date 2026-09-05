@@ -1,0 +1,24 @@
+{
+  "name": "@justomat/skills",
+  "version": "1.0.0",
+  "description": "Curated collection of production-tested Agent Skills compliant with the Agent Skills Specification",
+  "keywords": [
+    "agent-skills",
+    "agentskills",
+    "skills",
+    "claude-code",
+    "cursor",
+    "antigravity",
+    "codex",
+    "ai-agent"
+  ],
+  "author": "Geraldi Sutanto <contact@geraldisutanto.com> (https://github.com/justomat)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justomat/skills.git"
+  },
+  "scripts": {
+    "validate": "for s in skills/*; do [ -d \"$s\" ] && npx skills-ref validate \"$s\"; done"
+  }
+}
