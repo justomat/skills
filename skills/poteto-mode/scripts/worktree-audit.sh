@@ -22,9 +22,21 @@ prs=$(mktemp)
 gh pr list --author "@me" --state all --limit 1000 \
 	--json number,state,headRefName 2>/dev/null > "$prs" || echo "[]" > "$prs"
 
-# Transcripts dir: ~/.cursor/projects/<slugified-repo-path>/agent-transcripts.
+# Transcripts dir: check workspace agent-transcripts, ~/.claude/projects, ~/.agents/projects, or ~/.cursor/projects.
 slug=$(printf '%s' "$main_wt" | sed 's#^/##; s#/#-#g')
-transcripts="$HOME/.cursor/projects/$slug/agent-transcripts"
+transcripts=""
+for t_candidate in \
+	"$repo/agent-transcripts" \
+	"$repo/.claude/agent-transcripts" \
+	"$repo/.agents/agent-transcripts" \
+	"$HOME/.claude/projects/$slug" \
+	"$HOME/.agents/projects/$slug" \
+	"$HOME/.cursor/projects/$slug/agent-transcripts"; do
+	if [ -d "$t_candidate" ]; then
+		transcripts="$t_candidate"
+		break
+	fi
+done
 now=$(date +%s)
 
 printf "SIZE\tAGE\tMERGED\tDIRTY\tREMOTE\tPR\tLAST_CHAT\tBUCKET\tWORKTREE\n"
